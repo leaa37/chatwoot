@@ -43,7 +43,7 @@ describe Whatsapp::Providers::WhatsappCloudService do
               messaging_product: 'whatsapp',
               context: nil,
               to: '+123456789',
-              text: { body: message.content },
+              text: { body: message.content, preview_url: true },
               type: 'text'
             }.to_json
           )
@@ -60,7 +60,7 @@ describe Whatsapp::Providers::WhatsappCloudService do
               messaging_product: 'whatsapp',
               context: nil,
               to: '+123456789',
-              text: { body: message.content },
+              text: { body: message.content, preview_url: true },
               type: 'text'
             }.to_json
           )
@@ -78,7 +78,7 @@ describe Whatsapp::Providers::WhatsappCloudService do
                 message_id: message.source_id
               },
               to: '+123456789',
-              text: { body: message_with_reply.content },
+              text: { body: message_with_reply.content, preview_url: true },
               type: 'text'
             }.to_json
           )
@@ -338,7 +338,7 @@ describe Whatsapp::Providers::WhatsappCloudService do
             context: nil,
             recipient_type: 'individual',
             recipient: bsuid,
-            text: { body: message.content },
+            text: { body: message.content, preview_url: true },
             type: 'text'
           }.to_json
         )
@@ -355,7 +355,7 @@ describe Whatsapp::Providers::WhatsappCloudService do
             context: nil,
             recipient_type: 'individual',
             recipient: parent_bsuid,
-            text: { body: message.content },
+            text: { body: message.content, preview_url: true },
             type: 'text'
           }.to_json
         )
